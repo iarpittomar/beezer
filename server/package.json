@@ -4,8 +4,8 @@
   "description": "Backend for our CRUD app",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && webpack --mode development",
+    "start": "node ./dist/server.js"  
   },
   "author": "Arpit Tomar",
   "license": "ISC",
@@ -14,5 +14,15 @@
     "express": "^4.18.1",
     "firebase-admin": "^11.0.1",
     "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "html-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }
